@@ -1,0 +1,64 @@
+<div class="container mt-3">
+    <div class="row">
+        <a href="doctor.html" class="col-lg-4 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-primary text-white font-weight-bold">Doctors</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Doctors</span> <span class="h5">{{Data.data.doctors}}</span></h5>
+                </div>
+            </div>
+        </a>
+        <a href="patient.html" class="col-lg-4 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-secondary text-white font-weight-bold">Patients</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Patients</span> <span class="h5">{{Data.data.patients}}</span></h5>
+                </div>
+            </div>
+        </a>
+        <a href="booking.html" class="col-lg-4 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-success text-white font-weight-bold">Bookings</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Bookings</span> <span class="h5">{{Data.data.bookings}}</span></h5>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-12 mx-auto mt-3">
+    <div class="row">
+        <a href="javascript:void(0)" class="col-lg-3 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-info text-white font-weight-bold">New Request</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Request</span> <span class="h5">{{Data.data.newRequest}}</span></h5>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="col-lg-3 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-warning text-white font-weight-bold">Pending Request</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Request</span> <span class="h5">{{Data.data.pendingRequest}}</span></h5>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="col-lg-3 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-success text-white font-weight-bold">Verified Request</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Request</span> <span class="h5">{{Data.data.verifiedRequest}}</span></h5>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="col-lg-3 col-md-6 p-3 text-decoration-none">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header h3 bg-danger text-white font-weight-bold">Cancelled Request</div>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom text-dark d-flex justify-content-between"><span class="h5 font-weight-bold">Total Request</span> <span class="h5">{{Data.data.cancelledRequest}}</span></h5>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

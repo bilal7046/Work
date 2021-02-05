@@ -1,0 +1,86 @@
+<style>
+  .color {
+    background-color: red;
+  }
+  .colordefault {
+    background-color: white;
+  }
+</style>
+
+<div class="d-flex" id="wrapper">
+
+  <div id="page-content-wrapper">
+
+    <div class="container-fluid">
+      <h1 class="display-4 text-uppercase">Doctors({{Data.dataList.length}})</h1>
+      <div class="col-11 mx-auto mt-3 p-3 rounded shadow-sm">
+
+        <table class="table table-bordered table-responsive table-striped table-hover text-center text-capitalize">
+          <thead class="text-white bg-primary">
+            <tr>
+              <th style="display: none;">ID</th>
+              <th>Name</th>
+              <th>Father Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Certificates</th>
+              <th>License No.</th>
+              <th>Verification Status</th>
+              <th>Activation</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of Data.dataList" [ngclass]="(data.status==3)?color:colordefault">
+              <td style="display: none;">{{data.id}}</td>
+              <td class="text-truncate" title="Lorem">{{data.fullName}}</td>
+              <td class="text-truncate" title="Lorem Ipsum">{{data.fatherName}}</td>
+              <td title="example@mail.com">{{data.email}}</td>
+              <td class="text-truncate" title="+921234567890">{{data.AssistantNumber}}</td>
+
+              <td class="text-truncate" title="Address Street No.1 House No.1">
+                {{data.hospitalLocation}}</td>
+
+
+              <td>{{data.certificates}}</td>
+              <td>{{data.licenceNumber}}</td>
+              <td>
+                <select name="" id="" class="form-control bg-transparent border-0"
+                  (change)="ChangeStatus($event,data.id)">
+                  <option *ngFor="let s of status" [selected]="data.status==s.Id" [value]="s.Id">{{s.name}}</option>
+                </select>
+              </td>
+              <td>
+                <div *ngIf="data.isLicenceVerified;else elseBlock">
+                  <button class="btn btn-success btn-sm" name="" title="Click to Deactive"
+                    (click)="verifyDoctor(data.registrationCode)">Active</button>
+                </div>
+
+                <ng-template #elseBlock>
+                  <button class="btn btn-danger btn-sm" name="" title="Click to Deactive"
+                    (click)="verifyDoctor(data.registrationCode)">DeActivate</button>
+                </ng-template>
+              </td>
+              <td>
+                <span>
+                  <img src="../../assets/images/edit.png" alt="loading.." />
+
+                </span>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $("#menu-toggle").click(function (e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+
+</script>

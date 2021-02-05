@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login</title>
+    
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-light">
+   <!-- <div id="preloader">
+  <div id="status">&nbsp;</div>
+</div> -->
+    <div class="container-fluid d-flex justify-content-center align-items-center p-5">
+        <div class="col-md-5 col-11 bg-white rounded shadow-sm p-3 p-md-5 mt-5">
+            <img src="../../assets/images/logo.png" alt="logo Image" class="img-fluid mx-auto" style="max-width: 90px;">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="Email" class="font-weight-bold">Email</label>
+                        <input type="email" class="form-control"  required name="email" ngModel>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please Enter a valid Email.
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="Password" class="font-weight-bold">Password</label>
+                        <input type="password" class="form-control"  required name="password" ngModel>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please Enter a valid Password.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Phase" class="font-weight-bold">Choose Your Login Phase</label>
+                        <select class="custom-select" id="Phase" required>
+                            <option value="server">Main Server</option>
+                            <option value="test">Test Server</option>
+                        </select>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please select a valid Login Phase.
+                        </div>
+                    </div>
+                </div>
+                <p>{{error}}</p>
+                <button class="btn btn-primary col-md-4" type="submit" name="submit">Login</button>
+            </form>
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                    'use strict';
+                    window.addEventListener('load', function() {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+
+            </script>
+        </div>
+    </div>
+    
+    <script>
+    $(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
+})
+    </script>
+</body>
+
+</html>

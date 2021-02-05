@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand navbar-light bg-light border-bottom shadow-sm">
+    <button class="btn btn-outline-dark shadow-sm" id="menu-toggle"><span class="fa fa-bars"></span></button>
+    <div class="navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+                <div class="btn-group dropleft">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../assets/images/logo.png" alt="" class="img-fluid rounded-circle d-inline" style="width: 30px; height: 30px;"> Admin Name
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="managers.html">Add Role</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" (click)="logout()" >Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

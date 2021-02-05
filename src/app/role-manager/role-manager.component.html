@@ -1,0 +1,238 @@
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form >
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="font-weight-bold">Name</label>
+                                <input type="text" class="form-control"  name="name"  ngModel>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please Enter a valid Name.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="Email" class="font-weight-bold">Email</label>
+                                <input type="email" class="form-control"  name="email" ngModel>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please Enter a valid Email.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="Password" class="font-weight-bold">Password</label>
+                                <input type="password" class="form-control"   placeholder="Enter your Password"  name="password" ngModel>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please Enter a valid Password.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="file" class="font-weight-bold">Profile Image</label>
+                                <input type="file" class="form-control" >
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid Email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="Role" class="font-weight-bold">Choose A Role</label>
+                                <select class="custom-select"   name="role" ngModel>
+                                    <option value="admin">Admin</option>
+                                    <option value="editor">Editor</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a Role.
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary col-md-4" type="submit" name="submit">Update Manager</button>
+                    </form>
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function() {
+                            'use strict';
+                            window.addEventListener('load', function() {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                    form.addEventListener('submit', function(event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex" id="wrapper">
+      
+        <div id="page-content-wrapper">
+           
+            <div class="container-fluid mt-2">
+                <h1 class="display-4 text-uppercase">Add Manager</h1>
+                <div class="container-fluid d-flex justify-content-center align-items-center">
+                    <div class="col-md-8 col-10 bg-light rounded shadow-sm p-3 p-md-5 mt-5">
+                        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="font-weight-bold">Name</label>
+                                    <input type="text" class="form-control" required name="name"  ngModel>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Enter a valid Name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="Email" class="font-weight-bold">Email</label>
+                                    <input type="email" class="form-control"  name="email"   ngModel>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Enter a valid Email.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="Password" class="font-weight-bold">Password</label>
+                                    <input type="password" class="form-control"  name="password" ngModel>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Enter a valid Password.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="file" class="font-weight-bold">Profile Image</label>
+                                    <input type="file" class="form-control" id="file">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a valid Email.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="Role" class="font-weight-bold">Choose A Role</label>
+                                    <select class="custom-select"  required name="role"  ngModel>
+                                        <option  value="Admin">Admin</option>
+                                        <option value="Editor">Editor</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a Role.
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="btn btn-primary col-md-4" type="submit" value="Add Manager" >
+                        </form>
+                        <!-- <script>
+                            // Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function() {
+                                'use strict';
+                                window.addEventListener('load', function() {
+                                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                    var forms = document.getElementsByClassName('needs-validation');
+                                    // Loop over them and prevent submission
+                                    var validation = Array.prototype.filter.call(forms, function(form) {
+                                        form.addEventListener('submit', function(event) {
+                                            if (form.checkValidity() === false) {
+                                                event.preventDefault();
+                                                event.stopPropagation();
+                                            }
+                                            form.classList.add('was-validated');
+                                        }, false);
+                                    });
+                                }, false);
+                            })();
+
+                        </script> -->
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <h1 class="display-4 text-uppercase">Managers</h1>
+                    <div class="col-11 mx-auto mt-3 p-3 rounded shadow-sm">
+                        <table class="table table-bordered table-responsive-sm table-striped table-hover text-center text-capitalize">
+                            <thead class="text-white bg-secondary">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Image</th>
+                                    <th>Role</th>
+                                    <th>Activation</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of Data.dataList" >
+                                    <td>1</td>
+                                    <td class="text-truncate" style="max-width: 120px" title="Lorem">{{user.userName}}</td>
+                                    <td class="text-truncate" style="max-width: 120px" title="example@mail.com">{{user.email}}</td>
+                                    <td class="text-truncate" style="max-width: 120px" title="***********">***********</td>
+                                    <td class="" style="max-width: 120px" title="logo.png"><img src="images/logo.png" class="img-fluid d-inline" alt="" style="width: 30px; height: 30px;"></td>
+                                    <td class="text-truncate" style="max-width: 120px" title="admin">Admin</td>
+                                    <td>
+                                       <div *ngIf="user.isActive;else elseBlock ">
+                                        <button class="btn btn-success btn-sm" name="" title="Click to Blocked" (click)="ActiveDeactiveAdmin(user.email)">blocked</button>
+                                       </div>
+                                       <ng-template #elseBlock >
+                                        <button class="btn btn-danger btn-sm" name="" title="Click to Blocked" (click)="ActiveDeactiveAdmin(user.email)">Acivate</button>
+                                       </ng-template>
+                                    </td>
+                                    <td>
+                                        <img src="../../assets/images/edit.png" (click)="DeleteAdmin(user.email)"  alt="loading.."/> 
+                                        <!-- <button data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-sm" name=""><span class="fa fa-pen"></span></button> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+    </script>
+
+

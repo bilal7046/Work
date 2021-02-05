@@ -1,0 +1,41 @@
+<div class="d-flex" id="wrapper">
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <h1 class="display-4 text-uppercase">Specialities</h1>
+        <div class="col-11 mx-auto mt-3 p-3 rounded shadow-sm">
+          <div class="text-right pb-3">
+            <button class="btn btn-success" >Add Speciality</button>
+          </div>
+          <table class="table table-bordered  table-striped table-hover text-center text-capitalize" width="100%">
+            <thead class="text-white bg-primary">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let data of data.dataList">
+                <td>{{data.id}}</td>
+                <td class="text-truncate" style="max-width: 130px" title="Lorem">{{data.name}}</td>
+                <td>
+                  <span>
+                    <img src="../../assets/images/edit.png" alt="loading.." />
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  
+  </script>
+  

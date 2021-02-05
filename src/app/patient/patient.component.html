@@ -1,0 +1,52 @@
+
+
+
+    <div class="d-flex" id="wrapper">
+       
+        <div id="page-content-wrapper">
+           
+            <div class="container-fluid">
+              <h1 class="display-4 text-uppercase">Patients</h1>
+              <div class="col-11 mx-auto mt-3 p-3 rounded shadow-sm">
+                
+                <table class="table table-bordered table-responsive-sm table-striped table-hover text-center text-capitalize">
+                    <thead class="text-white bg-secondary">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+
+                            <th>Activation</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let patient of data.dataList">
+                            <td>{{patient.id}}</td>
+
+                            <td class="text-truncate" style="max-width: 120px" title="Lorem">{{patient.fullName}}</td>
+                            <td class="text-truncate" style="max-width: 120px" title="example@mail.com">{{patient.email}}</td>
+                            <td class="text-truncate" style="max-width: 120px" title="+921234567890">{{patient.phone}}</td>
+
+
+                            <td><button class="btn btn-success btn-sm" name="" title="Click to Deactive">{{patient.isActive}}</button></td>
+                            <td>
+                            <button class="btn btn-danger btn-sm" name="" onclick="return confirm('Are You Sure?');"><span class="fa fa-trash"></span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+

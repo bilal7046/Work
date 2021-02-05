@@ -1,0 +1,29 @@
+
+    <div class="d-flex" id="wrapper">
+       
+        <div id="page-content-wrapper">
+            
+            <div class="container-fluid">
+                <h1 class="display-4 text-uppercase">Categories</h1>
+                <div class="col-11 mx-auto mt-3 p-3 rounded shadow-sm">
+                
+                  <div>
+                      <form #categoryForm="ngForm" (ngSubmit)="Save(categoryForm.value)">
+                          <label class="label-control">Name</label>
+                          <input type="text" class="form-control" name="name" required ngModel>
+                          <input type="submit" value="Save" class="btn btn-primary mb-3"   >
+                      </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+    </script>
+

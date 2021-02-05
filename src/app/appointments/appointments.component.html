@@ -1,0 +1,53 @@
+
+    <div class="d-flex" id="wrapper">
+       
+        <div id="page-content-wrapper">
+            
+            <div class="container-fluid">
+                <h1 class="display-4 text-uppercase">Bookings</h1>
+                <div class="col-11 mx-auto mt-3 p-3 rounded shadow-sm">
+                    <table class="table table-bordered table-responsive-sm table-striped table-hover text-center text-capitalize">
+                        <thead class="text-white bg-success">
+                            <tr>
+                                <th>ID</th>
+                                <th>Doctor Name</th>
+                                <th>Patient Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Location</th>
+                                <th>Fee</th>
+                                <th>Booking Status</th>
+                                <th>Activation</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let appointment of Appointments.dataList">
+                                <td>{{appointment.id}}</td>
+                                <td class="text-truncate" style="max-width: 130px" title="Lorem">{{appointment.doctorName}}</td>
+                                <td class="text-truncate" style="max-width: 130px" title="Lorem Ipsum">{{appointment.patientName}}</td>
+                                <td class="text-truncate" style="max-width: 130px" title="12-12-20">{{appointment.formatedDate}}</td>
+                                <td class="text-truncate" style="max-width: 130px" title="07:56 Pm">{{appointment.time}}</td>
+                                <td class="text-truncate" style="max-width: 130px" title="Address Street No.1 House No.1">{{appointment.hospitalLocation}}</td>
+                                <td class="text-truncate" style="max-width: 130px" title="500">{{appointment.totalAmountPaid}}</td>
+                                <td style="max-width: 120px;"> {{appointment.status}}</td>
+                                <td><button class="btn btn-success btn-sm" name="" title="Click to Deactive">Active</button></td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm" name="" onclick="return confirm('Are You Sure?');"><span class="fa fa-trash"></span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+    </script>
+
