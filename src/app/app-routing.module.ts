@@ -55,6 +55,8 @@ const routes: Routes = [
   {
     path: 'speciality',
     component: SpecialityComponent,
+ 
+
     canActivate: [AuthGuardGuard]
   },
   {
